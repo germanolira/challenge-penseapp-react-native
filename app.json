@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "challenge-penseapp-react-native",
+    "slug": "challenge-penseapp-react-native",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "challenge-penseapp-react-native"
+}
