@@ -12,6 +12,7 @@ import {
   BottomWrapper,
   BotaoComprar,
   IconHeart,
+  TextNovidades,
 } from './styles'
 
 export default function ListProducts() {
@@ -30,7 +31,7 @@ export default function ListProducts() {
   return (
     <>
       <View>
-        <TitleText>As novidades. Veja o que acabou de chegar.</TitleText>
+        <TitleText><TextNovidades>As novidades</TextNovidades>. Veja o que acabou de chegar.</TitleText>
         <ListaProdutos
           data={produtos}
           keyExtractor={(produtos) => String(produtos.id)}

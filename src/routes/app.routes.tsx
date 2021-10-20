@@ -5,6 +5,7 @@ import Dashboard from '../screens/Dashboard';
 import { useTheme } from 'styled-components';
 import { Platform } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
+import Cadastro from '../screens/Cadastro';
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
@@ -39,7 +40,7 @@ export function AppRoutes() {
       />
       <Screen
         name="Cadastrar"
-        component={ListProducts}
+        component={Cadastro}
         options={{
           tabBarIcon: (({ size, color }) =>
             <MaterialIcons

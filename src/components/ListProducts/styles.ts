@@ -33,7 +33,7 @@ export const TitleProduct = styled.Text`
   text-align: left;
   font-size: ${RFValue(18)}px;
   justify-content: flex-start;
-  font-family: ${({ theme }) => theme.fonts.regular};
+  font-family: ${({ theme }) => theme.fonts.medium};
 `;
 
 export const ImageProduct = styled.Image`
@@ -43,6 +43,7 @@ export const ImageProduct = styled.Image`
 
 export const TextDescription = styled.Text`
   font-size: ${RFValue(15)}px;
+  color: ${({ theme }) => theme.colors.description};
 
   padding-top: 10px;
 `;
@@ -66,4 +67,8 @@ export const IconHeart = styled(AntDesign)`
   margin-right: 15px;
   font-size: ${RFValue(24)}px;
   color: ${({ theme }) => theme.colors.primary};
+`;
+
+export const TextNovidades = styled.Text`
+  color: ${({ theme }) => theme.colors.principal};
 `;

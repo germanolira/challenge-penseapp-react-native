@@ -7,6 +7,7 @@ export default {
     text_dark: '#000000',
     background: '#F5F5F7',
     principal: '#007AFF',
+    description: '#5C5C5D',
 
     secondary: '#FF872C',
     secondary_light: 'rgba(255, 135, 44, 0.3)',

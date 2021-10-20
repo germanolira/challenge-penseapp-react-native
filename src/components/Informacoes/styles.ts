@@ -1,11 +1,12 @@
 import { RFValue } from 'react-native-responsive-fontsize';
-import styled from 'styled-components';
+import styled from 'styled-components/native';
 
 export const Container = styled.View`
   align-items: center;
   justify-content: center;
 
   margin-top: 20px;
+  padding-bottom: 10px;
 `;
 
 export const ContainerWrapper = styled.View`
@@ -13,7 +14,7 @@ export const ContainerWrapper = styled.View`
   height: ${RFValue(150)}px;
 
   background-color: ${({ theme }) => theme.colors.components};
-  border-radius: 10px;
+  border-radius: ${RFValue(10)}px;
 `;
 
 export const Title = styled.Text`
