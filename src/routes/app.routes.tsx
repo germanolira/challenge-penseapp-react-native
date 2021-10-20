@@ -1,10 +1,11 @@
 import React from 'react';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import ListProducts from '../components/ListProducts';
-import Dashboard from '../screens/Dashboard';
-import { useTheme } from 'styled-components';
 import { Platform } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+import { useTheme } from 'styled-components';
+
+import Dashboard from '../screens/Dashboard';
 import Cadastro from '../screens/Cadastro';
 
 const { Navigator, Screen } = createBottomTabNavigator();

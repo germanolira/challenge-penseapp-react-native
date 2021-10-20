@@ -1,4 +1,3 @@
-// import styled components
 import styled from 'styled-components';
 import { RFValue } from 'react-native-responsive-fontsize';
 import { AntDesign } from '@expo/vector-icons';

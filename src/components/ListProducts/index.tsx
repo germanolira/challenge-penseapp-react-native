@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback } from "react";
-import { FlatList, Text, View, StyleSheet, Image, StatusBar } from "react-native";
+import React, { useState, useCallback } from "react";
+import { View, StatusBar } from "react-native";
 import api from "../../services/api";
 import { useFocusEffect } from '@react-navigation/native';
 
@@ -24,7 +24,8 @@ export default function ListProducts() {
 
   async function loadData() {
     try {
-      await api.get('http://192.168.3.63:3333/products/name_asc').then((response: any) => {
+      // Coloque o seu IP aqui
+      await api.get('http://{seu ip aqui}:3333/products/name_asc').then((response: any) => {
         setProdutos(response.data);
       })
     } catch (error) {
@@ -32,22 +33,12 @@ export default function ListProducts() {
     }
   }
 
-  // useEffect(() => {
-  //   try {
-  //     api.get('http://192.168.3.63:3333/products/name_asc').then((response: any) => {
-  //       setProdutos(response.data);
-  //     })
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }, []);
-
   useFocusEffect(useCallback(() => {
     loadData();
   }, []));
 
   function deletePost(id: string) {
-    axios.delete(`http://192.168.3.63:3333/products/${id}`)
+    axios.delete(`http://{seu ip aqui}:3333/products/${id}`)
 
     loadData();
   }
@@ -87,21 +78,3 @@ export default function ListProducts() {
     </>
   )
 }
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#fff',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-//   item: {
-//     padding: 10,
-//     fontSize: 18,
-//     height: 44,
-//   },
-//   image: {
-//     width: 300,
-//     height: 300,
-//   }
-// });
