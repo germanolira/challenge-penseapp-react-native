@@ -2,6 +2,10 @@
 
 Uma loja com uma listagem dos produtos, com função de cadastrar um novo produto, ou deletar.
 
+## Demonstração
+
+![Demonstração](https://media2.giphy.com/media/1tFBwRdmjDxOngg4Lf/giphy.gif?cid=790b76114699a59e7e76a0e8ebde6d5d22ad2d69ad436c56&rid=giphy.gif&ct=g)
+
 # Requerimentos
 
 ### Back-end
