@@ -27,6 +27,7 @@ Uma loja com uma listagem dos produtos, com função de cadastrar um novo produt
 - Resolver o problema do teclado sobrepondo o form
 - Limpar o form quando cadastrar algo
 - Wishlist
+- Caso não tenha produtos, mostre uma mensagem "Sem produtos cadastrado"
 
 ### Observação
 
