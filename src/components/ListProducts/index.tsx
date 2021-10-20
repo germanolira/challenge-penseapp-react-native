@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { FlatList, Text, View, StyleSheet, Image, StatusBar } from "react-native";
 import api from "../../services/api";
+import { useFocusEffect } from '@react-navigation/native';
+
 
 import {
   ListaProdutos,
@@ -13,20 +15,42 @@ import {
   BotaoComprar,
   IconHeart,
   TextNovidades,
+  BotaoDelete,
 } from './styles'
+import axios from "axios";
 
 export default function ListProducts() {
-  const [produtos, setProdutos] = useState<any | null>({});
+  const [produtos, setProdutos] = useState<any>([]);
 
-  useEffect(() => {
+  async function loadData() {
     try {
-      api.get('http://192.168.3.63:3333/products/name_asc').then((response: any) => {
+      await api.get('http://192.168.3.63:3333/products/name_asc').then((response: any) => {
         setProdutos(response.data);
       })
     } catch (error) {
       console.log(error);
     }
-  }, []);
+  }
+
+  // useEffect(() => {
+  //   try {
+  //     api.get('http://192.168.3.63:3333/products/name_asc').then((response: any) => {
+  //       setProdutos(response.data);
+  //     })
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }, []);
+
+  useFocusEffect(useCallback(() => {
+    loadData();
+  }, []));
+
+  function deletePost(id: string) {
+    axios.delete(`http://192.168.3.63:3333/products/${id}`)
+
+    loadData();
+  }
 
   return (
     <>
@@ -49,6 +73,11 @@ export default function ListProducts() {
                   ></BotaoComprar>
                   <IconHeart name="hearto" />
                 </BottomWrapper>
+                <BotaoDelete
+                  title="Deletar"
+                  onPress={() => { deletePost(produtos.id) }}
+                  accessibilityLabel="Este é um botão para deletar o produto"
+                />
               </ProdutosWrapper>
             </>
           )}

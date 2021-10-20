@@ -12,11 +12,7 @@ interface Props extends TextInputProps {
   name: string;
 }
 
-export function InputForm({
-  control,
-  name,
-  ...rest
-}: Props) {
+export function InputForm({ control, name, ...rest }: Props) {
   return (
     <Container>
       <Controller

@@ -61,6 +61,7 @@ export const BotaoComprar = styled.Button.attrs({
   width: 50px;
   height: 50px;
   font-size: ${RFValue(18)}px;
+  padding-bottom: 10px;
 `;
 
 export const IconHeart = styled(AntDesign)`
@@ -71,4 +72,14 @@ export const IconHeart = styled(AntDesign)`
 
 export const TextNovidades = styled.Text`
   color: ${({ theme }) => theme.colors.principal};
+`;
+
+export const BotaoDelete = styled.Button.attrs({
+  color: "#FF0000"
+})`
+  width: 50px;
+  height: 50px;
+  font-size: ${RFValue(18)}px;
+
+  padding-top: 10px;
 `;
