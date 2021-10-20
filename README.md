@@ -22,7 +22,7 @@ Uma loja com uma listagem dos produtos, com função de cadastrar um novo produt
 
 # O que pode ser feito no App ✏️
 
-- Adicionar Yup Resolver
+- Adicionar Yup
 - Usar ScrollView ao ínves de uma FlatList
 - Resolver o problema do teclado sobrepondo o form
 - Limpar o form quando cadastrar algo
