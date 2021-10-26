@@ -25,7 +25,7 @@ export default function ListProducts() {
   async function loadData() {
     try {
       // Coloque o seu IP aqui
-      await api.get('http://{seu ip aqui}:3333/products/name_asc').then((response: any) => {
+      await api.get('http://{192.168.3.63}:3333/products/name_asc').then((response: any) => {
         setProdutos(response.data);
       })
     } catch (error) {
@@ -38,7 +38,7 @@ export default function ListProducts() {
   }, []));
 
   function deletePost(id: string) {
-    axios.delete(`http://{seu ip aqui}:3333/products/${id}`)
+    axios.delete(`http://{192.168.3.63}:3333/products/${id}`)
 
     loadData();
   }
